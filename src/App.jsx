@@ -12,11 +12,15 @@ export default function App() {
     <div className="min-h-screen flex flex-col">
       <Topbar />
       <Header />
-      <main className="flex-1 pt-28"> {/* Topbar 12 + Header 44px environ */}
+      <main className="flex-1 pt-28">
+        {" "}
+        {/* Topbar 12 + Header 44px environ */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/a-propos" element={<About />} />
           <Route path="/laveries" element={<Laundries />} />
+          {/* si rien ne correspond → redirige vers "/" */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
       <Footer />
