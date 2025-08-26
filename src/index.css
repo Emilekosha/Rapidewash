@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hauteur pleine */
+html, body, #root { height: 100%; }
+
+/* Conteneur réutilisable */
+.container { @apply max-w-6xl mx-auto px-4; }
+
+/* Titres plus denses */
+.h1 { @apply text-3xl md:text-4xl font-semibold tracking-tight; }
+.h2 { @apply text-2xl md:text-3xl font-semibold; }
+
+/* Cartes pro */
+.card { @apply bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition; }
+
+/* Boutons */
+.btn-primary { @apply inline-flex items-center rounded-xl bg-blue-600 text-white px-5 py-3 font-medium shadow hover:shadow-md active:scale-95; }
+.btn-outline { @apply inline-flex items-center rounded-xl border border-gray-300 px-5 py-3 font-medium hover:border-gray-400 active:scale-95; }
+.btn-accent  { @apply inline-flex items-center rounded-xl bg-orange-500 text-white px-4 py-2 text-sm font-medium hover:bg-orange-600; }
+
+/* Bandeaux */
+.band { @apply bg-blue-900 text-blue-50; }
+.band-muted { @apply bg-blue-900/95 text-blue-50; }
+
+/* Liens */
+a.link { @apply text-blue-700 hover:underline; }
